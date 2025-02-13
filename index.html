@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ajwa Asif Portfolio</title>
+    <style>
+      /* General Reset */
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      /* Body Styling */
+      body {
+        font-family: Arial, sans-serif;
+        line-height: 1.6;
+        background-color: #f4f2f7;
+        color: #3a3a3a;
+      }
+
+      /* Navbar */
+      nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 15px 30px;
+        background-color: #9b59b6;
+        color: white;
+        position: sticky;
+        top: 0;
+        z-index: 100;
+      }
+
+      nav a {
+        color: white;
+        text-decoration: none;
+        margin: 0 15px;
+        font-weight: bold;
+      }
+
+      nav a:hover {
+        text-decoration: underline;
+      }
+
+      nav .links {
+        display: flex;
+      }
+
+      /* Section Styling */
+      section {
+        padding: 60px 30px;
+      }
+
+      header {
+        text-align: center;
+        padding: 50px 30px;
+        background: linear-gradient(to bottom, #9b59b6, #8e44ad);
+        color: white;
+        animation: fadeIn 1.5s ease-out;
+      }
+
+      header h1 {
+        font-size: 3rem;
+        margin-bottom: 10px;
+        font-weight: bold;
+        animation: slideUp 1s ease-out;
+      }
+
+      header p {
+        font-size: 1.3rem;
+        animation: slideUp 1.5s ease-out;
+      }
+
+      .resume-btn {
+        display: inline-block;
+        padding: 12px 25px;
+        margin: 20px auto;
+        background-color: #8e44ad;
+        color: white;
+        text-decoration: none;
+        font-weight: bold;
+        border-radius: 5px;
+        text-align: center;
+        animation: fadeIn 2s ease-out;
+      }
+
+      .resume-btn:hover {
+        background-color: #732d91;
+      }
+
+      /* About, Experience, and Projects Sections */
+      .projects,
+      .about,
+      .experience,
+      .contact {
+        background-color: white;
+        margin: 20px auto;
+        max-width: 1300px;
+        padding: 10px;
+        border-radius: 10px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        animation: fadeIn 2s ease-out;
+      }
+
+      h2 {
+        color: #9b59b6;
+        margin-bottom: 15px;
+        font-size: 2rem;
+        font-weight: bold;
+      }
+
+      p,
+      ul {
+        margin-bottom: 15px;
+        font-size: 1rem;
+      }
+
+      ul {
+        list-style-type: square;
+        margin-left: 20px;
+      }
+
+       .video-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+    justify-content: center;
+    padding: 30px;
+  }
+
+  .video-container {
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    padding: 15px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    overflow: hidden;
+  }
+
+  .video-container:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.15);
+  }
+
+  video {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 10px;
+  }
+
+  h3 {
+    font-size: 1.5rem;
+    margin: 10px 0;
+    font-weight: bold;
+    color: #8e44ad;
+  }
+
+  /* Mobile App Demo Specific Styling */
+  .mobile-app-gallery .video-container video {
+    height: 350px;
+    object-fit: contain;
+  }
+
+  /* Web App Demo Specific Styling */
+  .web-app-gallery .video-container video {
+    height: 350px;
+    object-fit: contain;
+  }
+      h3 {
+        font-size: 1.5rem;
+        margin: 10px 0;
+        font-weight: bold;
+        color: #8e44ad;
+      }
+
+      footer {
+        text-align: center;
+        padding: 15px;
+        background-color: #9b59b6;
+        color: white;
+        margin-top: 40px;
+      }
+
+      footer a {
+        color: #fff;
+        text-decoration: none;
+      }
+ .profile-picture {
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        margin-right: 20px;
+      }
+
+      /* Style for Project Descriptions */
+.project-description {
+  font-size: 1rem;
+  color: #555;
+  margin-top: 10px;
+  line-height: 1.6;
+  font-weight: normal;
+  text-align: left;
+  padding: 5px 10px;
+}
+
+      footer a:hover {
+        text-decoration: underline;
+      }
+
+      /* Keyframe Animations */
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+        }
+        to {
+          opacity: 1;
+        }
+      }
+
+      @keyframes slideUp {
+        from {
+          transform: translateY(50px);
+          opacity: 0;
+        }
+        to {
+          transform: translateY(0);
+          opacity: 1;
+        }
+      }
+
+      /* Contact Section */
+      .contact a {
+        color: #9b59b6;
+        font-weight: bold;
+      }
+
+      .contact a:hover {
+        text-decoration: underline;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav>
+      <div><a href="#">Ajwa Asif Portfolio</a></div>
+      <div class="links">
+        <a href="#home">Home</a>
+        <a href="#projects">Projects</a>
+        <a href="#about">About Me</a>
+        <a href="#experience">Experience</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </nav>
+
+    <!-- Home Section -->
+    <header id="home">
+        <img src="myy.png" alt="Ajwa Asif" class="profile-picture" />
+      <div>
+        <h1>Ajwa Asif</h1>
+        <p>Full-Stack Developer | Passionate about MERN Stack</p>
+        <a href="Ajwa Asif Resume.pdf" download class="resume-btn"
+          >Download My Resume</a
+        >
+      
+    </header>
+
+    <!-- About Me Section -->
+    <section id="about" class="about">
+      <h2>About Me</h2>
+      <p>
+        I am a dynamic and detail-oriented Software Engineering student with a
+        passion for innovation, seeking opportunities to apply strong analytical
+        and problem-solving skills in a collaborative environment. I specialize
+        in Full-Stack Development, particularly in the MERN stack.
+      </p>
+      <ul>
+        <li>
+          <b>Education:</b> Bachelors in Software Engineering, Fast-NUCES,
+          Lahore (2021-Present).
+        </li>
+        <li>
+          <b>Skills:</b> Java, MERN Stack, React Native, Python, MySQL, Content
+          Writing, and more.
+        </li>
+        <li>
+          <b>Certifications:</b> Web Development Bootcamp, Social Media
+          Marketing Training.
+        </li>
+      </ul>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="experience">
+      <h2>Experience</h2>
+      <p>
+        <b
+          >Web Development Intern - Ashtex Solutions (July 2024 – August
+          2024):</b
+        >
+        Built the BlockedRules Management System and SnapTask app, improving
+        efficiency by 25%.
+      </p>
+      <p>
+        <b>Web Development Intern - UltimaByte (June 2023 – August 2023):</b>
+        Contributed to a user-friendly shopping website, boosting traffic by
+        15%.
+      </p>
+    </section>
+
+    <!-- Projects Section -->
+    <!-- Mobile App Demo Gallery -->
+       <h2>Mobile App Demos</h2>
+
+<section class="video-gallery mobile-app-gallery">
+  <div class="video-container">
+    <video controls>
+      <source src="Find me here.mp4" type="video/mp4" />
+      Your browser does not support the video tag.
+    </video>
+    <h3>Find Me Here - Mobile App</h3>
+    <p class="project-description">
+      A mobile app that helps users find locations and navigate easily using maps. Built with React Native and Google Maps API for seamless location tracking and navigation.
+    </p>
+  </div>
+   <div class="video-container">
+    <video controls>
+      <source src="shopping add.mp4" type="video/mp4" />
+      Your browser does not support the video tag.
+    </video>
+    <h3>Demo 1 - Mobile App</h3>
+  </div>
+  <div class="video-container">
+    <video controls>
+      <source src="Product scheduler.mp4" type="video/mp4" />
+      Your browser does not support the video tag.
+    </video>
+    <h3>Product Schdeuler - Mobile App</h3>
+  </div>
+  <div class="video-container">
+    <video controls>
+      <source src="snaptask.mp4" type="video/mp4" />
+      Your browser does not support the video tag.
+    </video>
+    <h3>Snaptask- Mobile App</h3>
+  </div>
+  <div class="video-container">
+    <video controls>
+      <source src="password manager.mp4" type="video/mp4" />
+      Your browser does not support the video tag.
+    </video>
+    <h3>passowrd manager - Mobile App</h3>
+  </div>
+    <div class="video-container">
+    <video controls>
+      <source src="Restaurant add.mp4" type="video/mp4" />
+      Your browser does not support the video tag.
+    </video>
+    <h3>Restaurant add- Mobile App</h3>
+  </div>
+  <div class="video-container">
+    <video controls>
+      <source src="todo app.mp4" type="video/mp4" />
+      Your browser does not support the video tag.
+    </video>
+    <h3>todo- Mobile App</h3>
+  </div>
+  <div class="video-container">
+    <video controls>
+      <source src="Contact App.mp4" type="video/mp4" />
+      Your browser does not support the video tag.
+    </video>
+    <h3>Contact app - Mobile App</h3>
+  </div>
+  <!-- Add more mobile app demo videos here -->
+</section>
+
+<!-- Web App Demo Gallery -->
+<section class="video-gallery web-app-gallery">
+  <h2>Web App Demos</h2>
+  <div class="video-container">
+    <video controls>
+      <source src="callcenter.mp4.mp4" type="video/mp4" />
+      Your browser does not support the video tag.
+    </video>
+    <h3>Demo 1 - Web App</h3>
+  </div>
+  <div class="video-container">
+    <video controls>
+      <source src="callcenter.mp4" type="video/mp4" />
+      Your browser does not support the video tag.
+    </video>
+    <h3>Demo 2 - Web App</h3>
+  </div>
+  <!-- Add more web app demo videos here -->
+</section>
+
+    
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+      <h2>Contact</h2>
+      <p><b>Phone:</b> 0300-0024370</p>
+      <p>
+        <b>Email:</b>
+        <a href="mailto:ajwaasif73@gmail.com">ajwaasif73@gmail.com</a>
+      </p>
+      <p><b>Address:</b> DHA Phase 3, Lahore</p>
+      <p>
+        <b>LinkedIn:</b>
+        <a href="https://linkedin.com/in/ajwa-asif-98aba2230" target="_blank"
+          >linkedin.com/in/ajwa-asif-98aba2230</a
+        >
+      </p>
+      <p>
+        <b>GitHub:</b>
+        <a href="https://github.com/ItsAjwah" target="_blank"
+          >github.com/ItsAjwah</a
+        >
+      </p>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+      <p>© 2025 Ajwa Asif. All rights reserved.</p>
+    </footer>
+  </body>
+</html>
