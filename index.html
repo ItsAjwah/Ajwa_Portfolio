@@ -6,198 +6,245 @@
     <title>Ajwa Asif Portfolio</title>
     <style>
       /* General Reset */
-      * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-      }
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-      /* Body Styling */
-      body {
-        font-family: Arial, sans-serif;
-        line-height: 1.6;
-        background-color: #f4f2f7;
-        color: #3a3a3a;
-      }
+/* Body Styling */
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  background-color: #f4f2f7;
+  color: #3a3a3a;
+}
 
-      /* Navbar */
-      nav {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: 15px 30px;
-        background-color: #9b59b6;
-        color: white;
-        position: sticky;
-        top: 0;
-        z-index: 100;
-      }
+/* Navbar */
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px;
+  background-color: #9b59b6;
+  color: white;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
 
-      nav a {
-        color: white;
-        text-decoration: none;
-        margin: 0 15px;
-        font-weight: bold;
-      }
+nav a {
+  color: white;
+  text-decoration: none;
+  margin: 0 15px;
+  font-weight: bold;
+}
 
-      nav a:hover {
-        text-decoration: underline;
-      }
+nav a:hover {
+  text-decoration: underline;
+}
 
-      nav .links {
-        display: flex;
-      }
+nav .links {
+  display: flex;
+}
 
-      /* Section Styling */
-      section {
-        padding: 60px 30px;
-      }
-
-      header {
-        text-align: center;
-        padding: 50px 30px;
-        background: linear-gradient(to bottom, #9b59b6, #8e44ad);
-        color: white;
-        animation: fadeIn 1.5s ease-out;
-      }
-
-      header h1 {
-        font-size: 3rem;
-        margin-bottom: 10px;
-        font-weight: bold;
-        animation: slideUp 1s ease-out;
-      }
-
-      header p {
-        font-size: 1.3rem;
-        animation: slideUp 1.5s ease-out;
-      }
-
-      .resume-btn {
-        display: inline-block;
-        padding: 12px 25px;
-        margin: 20px auto;
-        background-color: #8e44ad;
-        color: white;
-        text-decoration: none;
-        font-weight: bold;
-        border-radius: 5px;
-        text-align: center;
-        animation: fadeIn 2s ease-out;
-      }
-
-      .resume-btn:hover {
-        background-color: #732d91;
-      }
-
-      /* About, Experience, and Projects Sections */
-      .projects,
-      .about,
-      .experience,
-      .contact {
-        background-color: white;
-        margin: 20px auto;
-        max-width: 1300px;
-        padding: 10px;
-        border-radius: 10px;
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        animation: fadeIn 2s ease-out;
-      }
-
-      h2 {
-        color: #9b59b6;
-        margin-bottom: 15px;
-        font-size: 2rem;
-        font-weight: bold;
-      }
-
-      p,
-      ul {
-        margin-bottom: 15px;
-        font-size: 1rem;
-      }
-
-      ul {
-        list-style-type: square;
-        margin-left: 20px;
-      }
-
-       .video-gallery {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    gap: 20px;
-    justify-content: center;
-    padding: 30px;
-  }
-
-  .video-container {
-    background: white;
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+/* Mobile Navigation */
+@media (max-width: 768px) {
+  nav {
+    flex-direction: column;
     text-align: center;
+  }
+  
+  nav .links {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
+
+/* Section Styling */
+section {
+  padding: 40px 20px;
+}
+
+/* Header */
+header {
+  text-align: center;
+  padding: 50px 20px;
+  background: linear-gradient(to bottom, #9b59b6, #8e44ad);
+  color: white;
+  animation: fadeIn 1.5s ease-out;
+}
+
+header h1 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+  font-weight: bold;
+  animation: slideUp 1s ease-out;
+}
+
+header p {
+  font-size: 1.2rem;
+  animation: slideUp 1.5s ease-out;
+}
+
+/* Adjust heading size for mobile */
+@media (max-width: 768px) {
+  header h1 {
+    font-size: 2rem;
+  }
+
+  header p {
+    font-size: 1rem;
+  }
+}
+
+/* Resume Button */
+.resume-btn {
+  display: inline-block;
+  padding: 12px 25px;
+  margin: 20px auto;
+  background-color: #8e44ad;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 5px;
+  text-align: center;
+  animation: fadeIn 2s ease-out;
+}
+
+.resume-btn:hover {
+  background-color: #732d91;
+}
+
+/* Sections */
+.projects,
+.about,
+.experience,
+.contact {
+  background-color: white;
+  margin: 20px auto;
+  max-width: 1300px;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  animation: fadeIn 2s ease-out;
+}
+
+/* Adjust for smaller screens */
+@media (max-width: 768px) {
+  .projects,
+  .about,
+  .experience,
+  .contact {
+    margin: 10px;
     padding: 15px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    overflow: hidden;
   }
+}
 
-  .video-container:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.15);
-  }
+h2 {
+  color: #9b59b6;
+  margin-bottom: 15px;
+  font-size: 2rem;
+  font-weight: bold;
+}
 
-  video {
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
-    border-radius: 8px;
-    margin-bottom: 10px;
-  }
-
-  h3 {
+/* Adjust heading size for mobile */
+@media (max-width: 768px) {
+  h2 {
     font-size: 1.5rem;
-    margin: 10px 0;
-    font-weight: bold;
-    color: #8e44ad;
   }
+}
 
-  /* Mobile App Demo Specific Styling */
-  .mobile-app-gallery .video-container video {
-    height: 350px;
-    object-fit: contain;
+p,
+ul {
+  margin-bottom: 15px;
+  font-size: 1rem;
+}
+
+ul {
+  list-style-type: square;
+  margin-left: 20px;
+}
+
+/* Video Gallery */
+.video-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+  justify-content: center;
+  padding: 30px;
+}
+
+.video-container {
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  padding: 15px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  overflow: hidden;
+}
+
+.video-container:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.15);
+}
+
+video {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+/* Adjust video height for smaller screens */
+@media (max-width: 768px) {
+  video {
+    height: 150px;
   }
+}
 
-  /* Web App Demo Specific Styling */
+/* Mobile & Web App Demo */
+.mobile-app-gallery .video-container video,
+.web-app-gallery .video-container video {
+  height: 350px;
+  object-fit: contain;
+}
+
+/* Adjust video height for smaller screens */
+@media (max-width: 768px) {
+  .mobile-app-gallery .video-container video,
   .web-app-gallery .video-container video {
-    height: 350px;
-    object-fit: contain;
+    height: 250px;
   }
-      h3 {
-        font-size: 1.5rem;
-        margin: 10px 0;
-        font-weight: bold;
-        color: #8e44ad;
-      }
+}
 
-      footer {
-        text-align: center;
-        padding: 15px;
-        background-color: #9b59b6;
-        color: white;
-        margin-top: 40px;
-      }
+h3 {
+  font-size: 1.5rem;
+  margin: 10px 0;
+  font-weight: bold;
+  color: #8e44ad;
+}
 
-      footer a {
-        color: #fff;
-        text-decoration: none;
-      }
- .profile-picture {
-        width: 100px;
-        height: 100px;
-        border-radius: 50%;
-        margin-right: 20px;
-      }
+/* Profile Picture */
+.profile-picture {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  margin-right: 20px;
+}
 
-      /* Style for Project Descriptions */
+/* Adjust profile picture for mobile */
+@media (max-width: 768px) {
+  .profile-picture {
+    width: 80px;
+    height: 80px;
+    margin: 0 auto;
+  }
+}
+
+/* Project Description */
 .project-description {
   font-size: 1rem;
   color: #555;
@@ -208,40 +255,63 @@
   padding: 5px 10px;
 }
 
-      footer a:hover {
-        text-decoration: underline;
-      }
+/* Footer */
+footer {
+  text-align: center;
+  padding: 15px;
+  background-color: #9b59b6;
+  color: white;
+  margin-top: 40px;
+}
 
-      /* Keyframe Animations */
-      @keyframes fadeIn {
-        from {
-          opacity: 0;
-        }
-        to {
-          opacity: 1;
-        }
-      }
+footer a {
+  color: #fff;
+  text-decoration: none;
+}
 
-      @keyframes slideUp {
-        from {
-          transform: translateY(50px);
-          opacity: 0;
-        }
-        to {
-          transform: translateY(0);
-          opacity: 1;
-        }
-      }
+footer a:hover {
+  text-decoration: underline;
+}
 
-      /* Contact Section */
-      .contact a {
-        color: #9b59b6;
-        font-weight: bold;
-      }
+/* Keyframe Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
 
-      .contact a:hover {
-        text-decoration: underline;
-      }
+@keyframes slideUp {
+  from {
+    transform: translateY(50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Contact Section */
+.contact a {
+  color: #9b59b6;
+  font-weight: bold;
+}
+
+.contact a:hover {
+  text-decoration: underline;
+}
+
+/* Responsive Grid Adjustments */
+@media (max-width: 768px) {
+  .video-gallery {
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    padding: 20px;
+  }
+}
+
     </style>
   </head>
   <body>
@@ -313,6 +383,7 @@
     </section>
 
     <!-- Projects Section -->
+     <section id="projects" class="projects">
     <!-- Mobile App Demo Gallery -->
        <h2>Mobile App Demos</h2>
 
@@ -407,7 +478,7 @@ A mobile app that helps users find locations and navigate easily using maps. Bui
   </div>
   <!-- Add more web app demo videos here -->
 </section>
-
+</section>
     
 
     <!-- Contact Section -->
